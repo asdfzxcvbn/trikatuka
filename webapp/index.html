@@ -87,28 +87,16 @@
     </div>
 </div>
 
-<!-- i have no idea what this does! -->
-<!-- <script type="text/javascript">
+<!-- i have no idea why this is even needed! LOVE JS !!!! !! ! ! -->
+<script type="text/javascript">
     jQuery(document).on('ready',function(){
-        jQuery.get('files', function(response){
-            var appDiv = $('#app');
-
-            var head= $('head');
-            angular.forEach(response, function(item){
-                head.append('<script src="' + item + '" type="application/javascript">');
-            });
-
-            appDiv.css({visibility:'visible'});
-            angular.bootstrap(appDiv, ['trikatuka2']);
-        }, 'json');
-
-        jQuery.fn.cookiesEU({
-            text: 'This website makes use of cookies to enhance browsing experience and provide additional functionality. By closing this message you give your permission to this website to store small bits of data as on your device.',
-            position: 'top',
-            auto_accept: false
-        });
+        var appDiv = $('#app');
+        var head= $('head');
+        head.append('<script src="dist/app.min.js" type="application/javascript">');
+        appDiv.css({visibility: 'visible'});
+        angular.bootstrap(appDiv, ['trikatuka2']);
     });
 
-</script> -->
+</script>
 </body>
 </html>
