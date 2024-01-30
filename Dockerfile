@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node
 # Create app directory
 
 WORKDIR /usr/src/app
@@ -9,5 +9,5 @@ COPY Gruntfile.js Gruntfile.js
 COPY package*.json ./
 
 RUN npm install
-RUN npm run build
+RUN npm run build --force
 ENTRYPOINT [ "node", "server.js" ]
