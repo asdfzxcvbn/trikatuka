@@ -33,7 +33,7 @@ console.log('Magic happens on port ' + server_port);
 io.on('connection', function (socket) {
     socket.on('login', function (processId, callback) {
         var host = socket.handshake.headers.host;
-        var protocol = socket.secure ? 'https://' : 'http://';
+        var protocol = 'https://';
         var redirectUri = protocol + host + '/user_auth_callback';
 
         var privileges = ['user-library-read',
